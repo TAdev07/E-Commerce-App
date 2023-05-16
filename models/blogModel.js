@@ -27,19 +27,19 @@ var blogSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    likes: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-    },
-    disLikes: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-    },
-    images: {
-      type: String,
-      default:
-        'https://www.searchenginejournal.com/wp-content/uploads/2020/08/7-ways-a-blog-can-help-your-business-right-now-5f3c06b9eb24e-760x400.webp',
-    },
+    likes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+      },
+    ],
+    dislikes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+      },
+    ],
+    images: [],
     author: {
       type: String,
       default: 'Admin',
