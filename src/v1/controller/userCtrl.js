@@ -1,4 +1,4 @@
-const { generateToken } = require('../config/jwtToken');
+const { generateToken } = require('../../config/jwtToken');
 const User = require('../models/userModel');
 const Product = require('../models/productModel');
 const Cart = require('../models/cartModel');
@@ -8,7 +8,7 @@ const Order = require('../models/orderModel');
 const uniqid = require('uniqid');
 const asyncHandler = require('express-async-handler');
 const validateMongoDbId = require('../utils/validateMongoodbId');
-const { generateRefreshToken } = require('../config/refreshToken');
+const { generateRefreshToken } = require('../../config/refreshToken');
 const jwt = require('jsonwebtoken');
 const { sendEmail } = require('./emailCtrl');
 const crypto = require('crypto');
